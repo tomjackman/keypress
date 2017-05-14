@@ -16,6 +16,8 @@ Technologies:
 * keycloak-admin-client
 * express-session
 * Pug
+* Bootstrap
+* Bluebird
 
 ## Sample UI
 

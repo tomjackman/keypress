@@ -12,7 +12,7 @@ block content
               th Last Name
               th Enabled
               th Created
-              th Delete
+              th Remove
         tbody
           each user, i in users
             tr
@@ -33,7 +33,7 @@ block content
               td
                 p #{new Date(user.createdTimestamp * 1000)}
               td
-                a(href='/users/delete/' + user.id) Delete
+                a(href='/users/delete/' + user.id) Remove
 
   button.btn.btn-primary(data-toggle="modal",data-target="#createUser") Create User
   +modal("Create User","createUser")

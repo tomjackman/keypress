@@ -1,21 +1,22 @@
 extends _bootstrap
 
 block content
-  h1= title
+  p
+  +panel-primary("Keycloak Groups")
 
-  div
-    table.table.table-striped.table-hover
-      thead
-        tr: th Name
-            th ID
-            th Path
-      tbody
-        each group, i in groups
-          tr
-            td
-              p #{group.name}
-            td
-              p #{group.id}
-            td
-              p #{group.path}
+    div
+      table.table.table-striped.table-hover
+        thead
+          tr: th Name
+              th ID
+              th Path
+        tbody
+          each group, i in groups
+            tr
+              td
+                p #{group.name}
+              td
+                p #{group.id}
+              td
+                p #{group.path}
 

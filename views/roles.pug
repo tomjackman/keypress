@@ -1,38 +1,51 @@
 extends _bootstrap
 
 block content
-  h1= title
+  p
+  +panel-primary("Keycloak Roles")
 
-  div
-    table.table.table-striped.table-hover
-      thead
-        tr: th Name
-            th ID
-            th Description
-            th Client Role
-            th Composite Role
-            th Scope Param Required
-      tbody
-        each role, i in roles
-          tr
-            td
-              p #{role.name}
-            td
-              p #{role.ID}
-            td
-              p #{role.description}
-            td
-              if role.clientRole
-                +icon-success("ok")
-              else
-                +icon-danger("remove")
-            td
-                if role.compositeRole
+    div
+      table.table.table-striped.table-hover
+        thead
+          tr: th Name
+              th ID
+              th Description
+              th Client Role
+              th Composite Role
+              th Scope Param Required
+              th Remove
+        tbody
+          each role, i in roles
+            tr
+              td
+                p #{role.name}
+              td
+                p #{role.ID}
+              td
+                p #{role.description}
+              td
+                if role.clientRole
                   +icon-success("ok")
                 else
                   +icon-danger("remove")
-            td
-                if role.compositeRole
-                  +icon-success("ok")
-                else
-                  +icon-danger("remove")
+              td
+                  if role.compositeRole
+                    +icon-success("ok")
+                  else
+                    +icon-danger("remove")
+              td
+                  if role.compositeRole
+                    +icon-success("ok")
+                  else
+                    +icon-danger("remove")
+              td
+                  a(href='/roles/delete/' + role.id) Remove
+
+  button.btn.btn-primary(data-toggle="modal",data-target="#createRole") Create Role
+  +modal("Create Role","createRole")
+    form(method='POST' action='/roles/create')
+      div.form-group
+        input#name.form-control(type='text', placeholder='Name' name='name')
+      div.form-group
+        input#name.form-control(type='text', placeholder='Description' name='description')
+      button.btn.btn-primary(type='submit') Create Role
