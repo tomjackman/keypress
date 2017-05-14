@@ -10,8 +10,10 @@ block content
               th Username
               th First Name
               th Last Name
+              th Email
               th Enabled
               th Created
+              th Groups
               th Remove
         tbody
           each user, i in users
@@ -29,12 +31,21 @@ block content
               td
                 p #{user.lastName}
               td
+                p #{user.email}
+              td
                   if user.enabled
                     +icon-success("ok")
                   else
                     +icon-danger("remove")
               td
-                p #{new Date(user.createdTimestamp * 1000)}
+                  p #{new Date(user.createdTimestamp * 1000)}
+              td
+                button.btn.btn-default(data-toggle="modal",data-target="#viewGroups") View Groups
+                +modal("User Groups","viewGroups")
+                  if user.groups
+                    +list-group(user.groups)
+                  else
+                    p User has no Groups.
               td
                 a(href='/users/delete/' + user.id) Remove
 
@@ -47,4 +58,6 @@ block content
         input#email.form-control(type='text', placeholder='First Name' name='firstName')
       div.form-group
         input#email.form-control(type='text', placeholder='Last Name' name='lastName')
+      div.form-group
+        input#email.form-control(type='text', placeholder='Email' name='email')
       button.btn.btn-primary(type='submit') Create User
