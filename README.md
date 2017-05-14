@@ -1,11 +1,11 @@
 # Keypress
 
-<img src="images/keycloak.png" width="300" height="100" />
-<img src="images/express.png" width="300" height="100" />
+<img src="images/keycloak.png" width="250" height="90" />
+<img src="images/express.png" width="250" height="90" />
 
 Keypress - Keycloak with Express.
 
-This is a sample application to show how you can use Keycloak with Node.js/Express to provide Access Control in your Application. It has 2 main feature areas:
+This is a *very experimental* sample application to show how you can use Keycloak with Node.js/Express to provide Access Control in your Application. It has 2 main feature areas:
 
 * Auth/Access Control on Express routes using the Keycloak Node.js Adapter.
 * Server Administation using Node.js with the Keycloak Admin Client.
@@ -22,7 +22,7 @@ Technologies:
 ![alt text](images/keypress-users.png)
 
 ## Features
-Currently the following functionality is implemented
+Currently the following UI functionality is implemented:
 
 *Users*
 * Create
@@ -35,7 +35,8 @@ Currently the following functionality is implemented
 *Groups*
 * Read
 
-Access Control
+*Access Control*
+
 Access control for users with the Realm `admin` Role on the following routes:
 * /users
 * /groups
@@ -67,5 +68,5 @@ How are the Roles, Groups and Users Configured?
 * TODO - Create a table with their configurations. Information can be seen in Keycloak anyway.
 
 ## Bugs/Issues?
-* Open an Issue in GitHub.
+* Open an Issue in GitHub and add a category label.
 
