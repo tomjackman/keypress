@@ -4,7 +4,7 @@ block content
   p
   +panel-primary("Keycloak Users")
     div
-      table.table.table-striped.table-hover
+      table.table.table-hover
         thead
           tr: th Avatar
               th Username
@@ -29,7 +29,10 @@ block content
               td
                 p #{user.lastName}
               td
-                p #{user.enabled}
+                  if user.enabled
+                    +icon-success("ok")
+                  else
+                    +icon-danger("remove")
               td
                 p #{new Date(user.createdTimestamp * 1000)}
               td

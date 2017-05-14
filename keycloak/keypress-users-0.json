@@ -7,8 +7,10 @@
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
+    "firstName" : "Keypress",
+    "lastName" : "Admin",
     "attributes" : {
-      "avatar" : [ "http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/user-male-icon.png" ]
+      "avatar" : [ "https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" ]
     },
     "credentials" : [ {
       "type" : "password",
@@ -61,12 +63,34 @@
     },
     "groups" : [ "/Management" ]
   }, {
+    "id" : "a6db90b4-32b3-4812-948d-022a3c1058d0",
+    "createdTimestamp" : 1494781393475,
+    "username" : "mquinn",
+    "enabled" : false,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Mary",
+    "lastName" : "Quinn",
+    "attributes" : {
+      "avatar" : [ "https://maxcdn.icons8.com/Share/icon/Users//circled_user_female1600.png" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ ]
+  }, {
     "id" : "55162e26-f182-489e-9368-1a4eed9800f8",
     "createdTimestamp" : 1494669097185,
     "username" : "sally",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
+    "firstName" : "Sally",
+    "lastName" : "Shorer",
     "attributes" : {
       "avatar" : [ "https://s-media-cache-ak0.pinimg.com/originals/3b/44/d4/3b44d4a91a8cd625984fb30451cf6686.png" ]
     },
@@ -79,33 +103,24 @@
     },
     "groups" : [ "/Backoffice" ]
   }, {
-    "id" : "51029acd-c414-4606-8f49-4b5315dcb455",
-    "createdTimestamp" : 1494669060960,
-    "username" : "trever",
-    "enabled" : true,
+    "id" : "586771c1-323e-4a58-a626-f9fd7e3a038b",
+    "createdTimestamp" : 1494685827848,
+    "username" : "twalsh",
+    "enabled" : false,
     "totp" : false,
     "emailVerified" : false,
+    "firstName" : "Tim",
+    "lastName" : "Walsh",
     "attributes" : {
-      "avatar" : [ "https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" ]
+      "avatar" : [ "https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png" ]
     },
-    "credentials" : [ {
-      "type" : "password",
-      "hashedSaltedValue" : "aNO9y8bRlfPnQfkuy7z0m9uVyWrE+SpYr3hraMBlQQ1QmRPyKjDZIIpxnVCidFAYpnEQNnGqsnCUlwx8v4UHVw==",
-      "salt" : "yw1C00XXo2+atpNKlV2eUg==",
-      "hashIterations" : 20000,
-      "counter" : 0,
-      "algorithm" : "pbkdf2",
-      "digits" : 0,
-      "period" : 0,
-      "createdDate" : 1494669066443,
-      "config" : { }
-    } ],
-    "disableableCredentialTypes" : [ "password" ],
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
       "account" : [ "view-profile", "manage-account" ]
     },
-    "groups" : [ "/Drivers" ]
+    "groups" : [ ]
   } ]
 }
