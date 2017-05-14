@@ -1,0 +1,7 @@
+{
+ "baseUrl": "http://localhost:8080/auth",
+ "username": "admin",
+ "password": "admin",
+ "grant_type": "password",
+ "client_id": "admin-cli"
+}

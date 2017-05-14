@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+    br
+    form(method='POST' action='/users/create')
+      div.form-group
+        input#name.form-control(type='text', placeholder='Username' name='username')
+      div.form-group
+        input#email.form-control(type='text', placeholder='First Name' name='firstName')
+        div.form-group
+          input#email.form-control(type='text', placeholder='First Name' name='lastName')
+      button.btn.btn-primary(type='submit') Add
+
+  a(href='/') Home

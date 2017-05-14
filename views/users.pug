@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1= title
+
+  div
+    table.table.table-striped.table-hover
+      thead
+        tr: th Avatar
+            th Username
+            th First Name
+            th Last Name
+            th Enabled
+            th Created
+            th Delete
+      tbody
+        each user, i in users
+          tr
+            td
+              if user.attributes
+                if user.attributes.avatar
+                  img.className#IdName(src= "" + user.attributes.avatar height="50" width="50")
+              else
+                img.className#IdName(src= "https://t3.ftcdn.net/jpg/01/43/75/28/240_F_143752821_Jz7Ku4xLvxk8wOupEK4AeGwCE62pSXSb.jpg" height="50" width="50")
+            td
+              p #{user.username}
+            td
+              p #{user.firstName}
+            td
+              p #{user.lastName}
+            td
+              p #{user.enabled}
+            td
+              p #{new Date(user.createdTimestamp * 1000)}
+            td
+              a(href='/users/delete/' + user.id) Delete
+
+
+  a(href='/users/create') Create New User
+  br
+  a(href='/') Home

@@ -1,0 +1,111 @@
+{
+  "realm" : "keypress",
+  "users" : [ {
+    "id" : "b84b2b51-cb71-40af-9884-01f0238377a8",
+    "createdTimestamp" : 1494671579937,
+    "username" : "keypress-admin",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "attributes" : {
+      "avatar" : [ "http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/user-male-icon.png" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "U0lh+58EYfDOmMWJ6BDdBZLKgW17mc12jOVhY/2xf6bKdBeT34Glzb8zBdi8Dm/OOT9utO90QmI3XZuvUhosoA==",
+      "salt" : "zhX0e8PIuLVA4ehUHtxUnw==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1494671611161,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Admins" ]
+  }, {
+    "id" : "653de52e-f6fb-44f5-b1b6-24b92042d3a6",
+    "createdTimestamp" : 1494669046544,
+    "username" : "max",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "Max",
+    "lastName" : "Million",
+    "attributes" : {
+      "avatar" : [ "https://s-media-cache-ak0.pinimg.com/originals/b1/bb/ec/b1bbec499a0d66e5403480e8cda1bcbe.png" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "BNzx3ETbY7pMtly4W4sfetyi7H9Pp/DDLoD54j3sRcUfBFj+ZWYUaF//hFRTrrm5MW+rIrTx+YzyjYbpxZ5tfg==",
+      "salt" : "jumh9juuFQborzMKPYeOsQ==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1494669081500,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Management" ]
+  }, {
+    "id" : "55162e26-f182-489e-9368-1a4eed9800f8",
+    "createdTimestamp" : 1494669097185,
+    "username" : "sally",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "attributes" : {
+      "avatar" : [ "https://s-media-cache-ak0.pinimg.com/originals/3b/44/d4/3b44d4a91a8cd625984fb30451cf6686.png" ]
+    },
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Backoffice" ]
+  }, {
+    "id" : "51029acd-c414-4606-8f49-4b5315dcb455",
+    "createdTimestamp" : 1494669060960,
+    "username" : "trever",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "attributes" : {
+      "avatar" : [ "https://freeiconshop.com/wp-content/uploads/edd/person-flat.png" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "aNO9y8bRlfPnQfkuy7z0m9uVyWrE+SpYr3hraMBlQQ1QmRPyKjDZIIpxnVCidFAYpnEQNnGqsnCUlwx8v4UHVw==",
+      "salt" : "yw1C00XXo2+atpNKlV2eUg==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1494669066443,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Drivers" ]
+  } ]
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+
+  div
+    table.table.table-striped.table-hover
+      thead
+        tr: th Name
+            th ID
+            th Path
+      tbody
+        each group, i in groups
+          tr
+            td
+              p #{group.name}
+            td
+              p #{group.id}
+            td
+              p #{group.path}
+
+  br
+  a(href='/') Home
