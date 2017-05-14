@@ -20,8 +20,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* DELETE role. */
-router.get('/delete/:roleId', function(req, res, next) {
-  deleteRole(req.params.roleId).then(function(result) {
+router.get('/delete/:roleName', function(req, res, next) {
+  deleteRole(req.params.roleName).then(function(result) {
     res.redirect('/roles');
   });
 });
@@ -55,14 +55,14 @@ function getRoles() {
 
 /**
   A function to delete a role in a realm
-  @param {string} roleId - The id of the role to delete
+  @param {string} roleName - The name of the role to delete
   @returns {Promise} A promise that resolves.
 **/
-function deleteRole(roleId) {
+function deleteRole(roleName) {
   return new Promise(function(resolve, reject) {
     adminClient(adminClientConfig)
     .then((client) => {
-      client.roles.remove(keycloakJSON.realm, roleId)
+      client.roles.remove(keycloakJSON.realm, roleName)
         .then(() => {
           resolve();
       })
@@ -79,7 +79,7 @@ function createRole(role) {
   return new Promise(function(resolve, reject) {
     adminClient(adminClientConfig)
     .then((client) => {
-      client.users.create(keycloakJSON.realm, role)
+      client.roles.create(keycloakJSON.realm, role)
         .then((createdRole) => {
           resolve(createdRole);
       })

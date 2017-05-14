@@ -39,7 +39,7 @@ block content
                   else
                     +icon-danger("remove")
               td
-                  a(href='/roles/delete/' + role.id) Remove
+                  a(href='/roles/delete/' + role.name) Remove
 
   button.btn.btn-primary(data-toggle="modal",data-target="#createRole") Create Role
   +modal("Create Role","createRole")

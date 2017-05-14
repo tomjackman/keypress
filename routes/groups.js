@@ -19,6 +19,20 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* DELETE group. */
+router.get('/delete/:groupId', function(req, res, next) {
+  deleteGroup(req.params.groupId).then(function(result) {
+    res.redirect('/groups');
+  });
+});
+
+/* CREATE a group. */
+router.post('/create', function(req, res, next) {
+  createGroup(req.body).then(function(result) {
+    res.redirect('/groups');
+  });
+});
+
 /**
   A function to get the list of groups for a realm.
   @returns {Promise} A promise that will resolve with an Array of role objects
@@ -36,6 +50,40 @@ function getGroups() {
       console.log('Error', err);
       reject(err);
     });
+  });
+}
+
+/**
+  A function to delete a group in a realm
+  @param {string} groupId - The id of the group to delete
+  @returns {Promise} A promise that resolves.
+**/
+function deleteGroup(groupId) {
+  return new Promise(function(resolve, reject) {
+    adminClient(adminClientConfig)
+    .then((client) => {
+      client.groups.remove(keycloakJSON.realm, groupId)
+        .then(() => {
+          resolve();
+      })
+    })
+  });
+}
+
+/**
+  A function to create a new group for a realm.
+  @param {object} group - The JSON representation of a group - name must be unique
+  @returns {Promise} A promise that will resolve with the group object
+**/
+function createGroup(group) {
+  return new Promise(function(resolve, reject) {
+    adminClient(adminClientConfig)
+    .then((client) => {
+      client.groups.create(keycloakJSON.realm, group)
+        .then((createdGroup) => {
+          resolve(createdGroup);
+      })
+    })
   });
 }
 

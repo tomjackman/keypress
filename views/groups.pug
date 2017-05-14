@@ -19,4 +19,13 @@ block content
                 p #{group.id}
               td
                 p #{group.path}
+              td
+                a(href='/groups/delete/' + group.id) Remove
+
+  button.btn.btn-primary(data-toggle="modal",data-target="#createGroup") Create Group
+  +modal("Create Group","createGroup")
+    form(method='POST' action='/groups/create')
+      div.form-group
+        input#name.form-control(type='text', placeholder='Name' name='name')
+      button.btn.btn-primary(type='submit') Create Group
 

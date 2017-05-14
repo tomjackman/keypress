@@ -32,10 +32,14 @@ Currently the following UI functionality is implemented:
 * Delete
 
 *Roles*
+* Create
 * Read
+* Delete
 
 *Groups*
+* Create
 * Read
+* Delete
 
 *Access Control*
 
