@@ -53,17 +53,21 @@ html(lang="en")
 			meta(name="description",content="")
 			meta(name="author",content="")
 			link(rel="icon",href="../../favicon.ico")
-			link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-			link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
 			link(rel='stylesheet', href='/stylesheets/style.css')
 			script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
 			script(src='/bootstrap/js/bootstrap.min.js')
-			link(rel='stylesheet', href='/stylesheets/style.css')
 			title= title
 			block styles
 				link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 	body(data-spy="scroll",data-target=".scrollspy")
+		block menu
+		+navbar("Keypress","dropdown_menu","inverse")
+			+nav_item("/") Home
+			+nav_item("/users") Users
+			+nav_item("/roles") Roles
+			+nav_item("/groups") Groups
 		block content
+
 
 		block scripts
 			script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")

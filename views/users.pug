@@ -1,41 +1,47 @@
-extends layout
+extends _bootstrap
 
 block content
-  h1= title
+  p
+  +panel-primary("Keycloak Users")
+    div
+      table.table.table-striped.table-hover
+        thead
+          tr: th Avatar
+              th Username
+              th First Name
+              th Last Name
+              th Enabled
+              th Created
+              th Delete
+        tbody
+          each user, i in users
+            tr
+              td
+                if user.attributes
+                  if user.attributes.avatar
+                    img.className#IdName(src= "" + user.attributes.avatar height="50" width="50")
+                else
+                  img.className#IdName(src= "https://t3.ftcdn.net/jpg/01/43/75/28/240_F_143752821_Jz7Ku4xLvxk8wOupEK4AeGwCE62pSXSb.jpg" height="50" width="50")
+              td
+                p #{user.username}
+              td
+                p #{user.firstName}
+              td
+                p #{user.lastName}
+              td
+                p #{user.enabled}
+              td
+                p #{new Date(user.createdTimestamp * 1000)}
+              td
+                a(href='/users/delete/' + user.id) Delete
 
-  div
-    table.table.table-striped.table-hover
-      thead
-        tr: th Avatar
-            th Username
-            th First Name
-            th Last Name
-            th Enabled
-            th Created
-            th Delete
-      tbody
-        each user, i in users
-          tr
-            td
-              if user.attributes
-                if user.attributes.avatar
-                  img.className#IdName(src= "" + user.attributes.avatar height="50" width="50")
-              else
-                img.className#IdName(src= "https://t3.ftcdn.net/jpg/01/43/75/28/240_F_143752821_Jz7Ku4xLvxk8wOupEK4AeGwCE62pSXSb.jpg" height="50" width="50")
-            td
-              p #{user.username}
-            td
-              p #{user.firstName}
-            td
-              p #{user.lastName}
-            td
-              p #{user.enabled}
-            td
-              p #{new Date(user.createdTimestamp * 1000)}
-            td
-              a(href='/users/delete/' + user.id) Delete
-
-
-  a(href='/users/create') Create New User
-  br
-  a(href='/') Home
+  button.btn.btn-primary(data-toggle="modal",data-target="#createUser") Create User
+  +modal("Create User","createUser")
+    form(method='POST' action='/users/create')
+      div.form-group
+        input#name.form-control(type='text', placeholder='Username' name='username')
+      div.form-group
+        input#email.form-control(type='text', placeholder='First Name' name='firstName')
+      div.form-group
+        input#email.form-control(type='text', placeholder='Last Name' name='lastName')
+      button.btn.btn-primary(type='submit') Create User

@@ -26,11 +26,6 @@ router.get('/delete/:userId', function(req, res, next) {
   });
 });
 
-/* CREATE VIEW for a user. */
-router.get('/create', function(req, res, next) {
-  res.render('userCreate', { title: 'Create User'});
-});
-
 /* CREATE a user. */
 router.post('/create', function(req, res, next) {
   createUser(req.body).then(function(result) {
