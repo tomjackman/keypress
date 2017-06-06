@@ -1,7 +1,6 @@
 # Keypress
 
-<img src="images/keycloak.png" width="250" height="90" />
-<img src="images/express.png" width="250" height="90" />
+## Description
 
 Keypress - Keycloak with Express.
 
