@@ -67,6 +67,8 @@ Then run the keypress application itself:
 
 `npm start`
 
+Visit `http://localhost:3000/` in your browser.
+
 The `keypress-admin` users password is `admin`.
 
 How are the Roles, Groups and Users Configured?
