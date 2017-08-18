@@ -12,7 +12,8 @@
     "email" : "apublisher@keyonic.com",
     "attributes" : {
       "job" : [ "Blogger" ],
-      "avatar" : [ "https://s3.amazonaws.com/uifaces/faces/twitter/chadengle/128.jpg" ]
+      "avatar" : [ "https://s3.amazonaws.com/uifaces/faces/twitter/chadengle/128.jpg" ],
+      "summary" : [ "I like to write Blogs!" ]
     },
     "credentials" : [ {
       "type" : "password",
