@@ -1,0 +1,105 @@
+{
+  "realm" : "keypress",
+  "users" : [ {
+    "id" : "2d090f2a-0653-41a3-aa18-b37073adf215",
+    "createdTimestamp" : 1503055534798,
+    "username" : "apublisher",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Anthony",
+    "lastName" : "Publisher",
+    "email" : "apublisher@keyonic.com",
+    "attributes" : {
+      "job" : [ "Blogger" ],
+      "avatar" : [ "https://s3.amazonaws.com/uifaces/faces/twitter/chadengle/128.jpg" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "l0NXEr7ArXDAz4Pf3SdJCp1B9lLZj3llL+dryebE3XebVrO3SQ3eEoLRFcdibJDBYGbZsSonlOk9GWy9VG8C/g==",
+      "salt" : "uZc4zCXSAxVUuqALUGQ7HQ==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2-sha256",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1503055677145,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Publishers" ]
+  }, {
+    "id" : "3ae1315a-8527-4dab-93cb-ffccfd6facfc",
+    "createdTimestamp" : 1503055137081,
+    "username" : "areader",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Alex",
+    "lastName" : "Reader",
+    "email" : "areader@keyonic.com",
+    "attributes" : {
+      "summary" : [ "I like to read Blog Posts" ],
+      "avatar" : [ "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" ],
+      "job" : [ "Blog Post Reader" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "5QaqfMNr39JUtAriNc8+gdKLvPXW8fVyhPk/1Nd2tscg+XHt6Bdx3jK1/jidu9OAvRwvxk1B2hjAgidQrKp0CQ==",
+      "salt" : "796MbJXts9Sup5CCLivxRA==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2-sha256",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1503055668415,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "offline_access", "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Readers" ]
+  }, {
+    "id" : "bf4ab406-d2aa-4b14-8939-ad8bb7f533ff",
+    "createdTimestamp" : 1494671579937,
+    "username" : "keypress-admin",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Keypress",
+    "lastName" : "Admin",
+    "email" : "admin@keypress.com",
+    "attributes" : {
+      "summary" : [ "I am a Server Admin." ],
+      "avatar" : [ "https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg" ],
+      "job" : [ "Administrator" ]
+    },
+    "credentials" : [ {
+      "type" : "password",
+      "hashedSaltedValue" : "/b2byglnun0yVeVDUYWHLrin3hg9ha0Z1UCRn5LVmUfHYxsqgEUI0aRIF6RiaFx3p4IIyLsiCNPvsARw9zih5w==",
+      "salt" : "44YhEf29HGWUL3CMFHmz+A==",
+      "hashIterations" : 20000,
+      "counter" : 0,
+      "algorithm" : "pbkdf2-sha256",
+      "digits" : 0,
+      "period" : 0,
+      "createdDate" : 1494671611161,
+      "config" : { }
+    } ],
+    "disableableCredentialTypes" : [ "password" ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "uma_authorization" ],
+    "clientRoles" : {
+      "account" : [ "view-profile", "manage-account" ]
+    },
+    "groups" : [ "/Admins" ]
+  } ]
+}
