@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 // import keycloak node.js client adapter
 const Keycloak = require('keycloak-connect');
@@ -17,6 +18,8 @@ var groups = require('./routes/groups');
 
 
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -51,7 +54,7 @@ app.use(keycloak.middleware());
 -> Express Routes.
 *********************************************************/
 
-app.use('/', index);
+app.use('/', keycloak.protect(), index);
 
 // Access is limited to a Realm User with a Realm 'admin' Role.
 app.use('/users', keycloak.protect('realm:admin'), users);
