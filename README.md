@@ -77,3 +77,5 @@ How are the Roles, Groups and Users Configured?
 ## Bugs/Issues?
 * Open an Issue in GitHub and add a category label.
 
+## Bearer Example
+For a bearer example, checkout the `bearer_example` branch that works with the Keyonic-v2 `bearer_example` branch. Also ensure that the following is set in your realm config `"bearerOnly": true` or simply set the client to be bearer-only in the admin console in Keycloak.
